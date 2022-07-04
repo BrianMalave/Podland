@@ -271,7 +271,7 @@ header nav ul li:last-of-type a {
 
 #news .last-news h2 {
     padding-bottom: 36px;
-    padding-top: 311px;
+    padding-top: 240px;
     Font-family: "IBM Plex Sans";
     font-size: 48px;
     color: #FFFFFF;
@@ -282,7 +282,7 @@ header nav ul li:last-of-type a {
     background: #00F3BB;
     width: 345px;
     height: 56px;
-    Font-family: "IBM Plex Sans";
+    font-family: "IBM Plex Mono", medium;
     font-size: 18px;
     color: #060A24;
     letter-spacing: 0;
@@ -294,5 +294,16 @@ header nav ul li:last-of-type a {
 
 .foot {
     height: 83px;
-    background-color: red;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
+
+.foot p {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 16px;
+    color: #060A24;
+    letter-spacing: 0;
+    line-height: 28px;
+    padding-left: 100px;
+    }
