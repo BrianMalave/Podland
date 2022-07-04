@@ -6,6 +6,7 @@
     font-family: 'IBM Plex Sans', sans-serif;
 }
 
+/**********************************************HEADER*****************************************/
 .container {
     margin: auto;
     padding: 0 100px;
@@ -59,6 +60,8 @@ header nav ul li:last-of-type a {
     margin-right: 0;
 }
 
+/**********************************************Hero-section*****************************************/
+
 .hero {
     max-width: 1440px;
     margin: auto;
@@ -90,7 +93,8 @@ header nav ul li:last-of-type a {
     line-height: 24px;
 }
 
-.button {
+.hero .hero-content button {
+    font-family: "IBM Plex Mono", medium;
     background-color: #00F3BB;
     width: 226px;
     height: 56px;
@@ -102,6 +106,14 @@ header nav ul li:last-of-type a {
     line-height: 24px;
     border: none;
 }
+
+.hero .hero-content button:hover {
+    background-image: linear-gradient(225deg, #0000FE 0%, #00F0B8 100%);
+    color: #FFFFFF;
+}
+
+
+/**********************************************Episodes-section*****************************************/
 
 .episodes {
     display: flex;
@@ -132,6 +144,9 @@ header nav ul li:last-of-type a {
 .episode1 {
     padding-bottom: 72px;
 }
+
+/**********************************************Us-section*****************************************/
+
 
 .nosotrxs {
     width: 100%;
@@ -180,6 +195,9 @@ header nav ul li:last-of-type a {
 	padding-right: 1px;
 }
 
+/**********************************************Special guest-section*****************************************/
+
+
 .special {
     display: flex;
     flex-wrap: wrap;
@@ -214,6 +232,9 @@ header nav ul li:last-of-type a {
     object-fit: cover;
     vertical-align: bottom;
 }
+
+/**********************************************themes-section*****************************************/
+
 
 #themes .some-themes {
     display: flex;
@@ -259,6 +280,9 @@ header nav ul li:last-of-type a {
     max-width: 268px;
 }
 
+/**********************************************last-news-section*****************************************/
+
+
 #news .last-news {
     display: flex;
     flex-direction: column;
@@ -291,6 +315,14 @@ header nav ul li:last-of-type a {
     text-decoration: none;
     border: none;
 }
+
+#news .last-news button:hover{
+        background-image: linear-gradient(225deg, #0000FE 0%, #00F0B8 100%);
+        color: #FFFFFF;
+}
+
+/**********************************************footer*****************************************/
+
 
 .foot {
     height: 83px;
