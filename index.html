@@ -4,28 +4,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" media="screen and (max-width: 960px)" href="mobile-styles.css">
 
     <title>Podcast Landing Page</title>
 </head>
 <body>
     <header>
         <div class="container">
-            <section class="logo"><img src="images/logo.svg" alt="logo"></section>
-                <nav>
-                    <ul>
-                        <li><a href="#">EPISODIOS</a></li>
-                        <li><a href="#">NOSOTROS</a></li>
-                        <li><a href="#">ENTREVISTAS</a></li>
-                        <li><a href="#">TOPICOS</a></li>
-                    </ul>
-                </nav>    
+            <a href="index.html"><img src="images/logo.svg" alt="logo" width="36px"></a>
+                        <nav role="navigation">
+                            <div id="burger-menu">
+                                <input type="checkbox" id="checkbox">
+                                    <label for="checkbox">
+                                        <span class="s1"></span>
+                                        <span class="s2"></span>
+                                        <span class="s3"></span>
+                                    </label>
+                                    <ul id="menu">
+                                        <li><a href="index.html#ep">EPISODIOS</a></li>
+                                        <li><a href="index.html#us">NOSOTROS</a></li>
+                                        <li><a href="index.html#special-guest">ENTREVISTAS</a></li>
+                                        <li><a href="index.html#themes">TOPICOS</a></li>
+                                    </ul>
+                            </div>
+                        </nav>
         </div>
     </header>
 
@@ -46,12 +55,12 @@
 
     <section id="ep">
         <div class="episodes">
-            <h2 class="episodios">Episodios</h2>        
+            <h2>Episodios</h2>        
                 <div class="container2">
-                    <iframe src="https://open.spotify.com/embed/show/2ySVrxGkN6n6frMTo9Nsrt?theme=0" width="584px" height="232" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-                    <iframe src="https://open.spotify.com/embed/show/4kYCRYJ3yK5DQbP5tbfZby?theme=0" width="584px" height="232" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-                    <iframe src="https://open.spotify.com/embed/show/5JxcIaIkN8zx3Zy7yD9snv?theme=0" width="584px" height="232" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-                    <iframe src="https://open.spotify.com/embed/show/2Iibd5A6R7mxkCm4NwNmUn?theme=0" width="584px" height="232" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                    <iframe src="https://open.spotify.com/embed/show/2ySVrxGkN6n6frMTo9Nsrt?theme=0" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                    <iframe src="https://open.spotify.com/embed/show/4kYCRYJ3yK5DQbP5tbfZby?theme=0" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                    <iframe src="https://open.spotify.com/embed/show/5JxcIaIkN8zx3Zy7yD9snv?theme=0" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                    <iframe src="https://open.spotify.com/embed/show/2Iibd5A6R7mxkCm4NwNmUn?theme=0" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe>
                 </div>
         </div>
     </section>

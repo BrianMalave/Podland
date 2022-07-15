@@ -1,3 +1,7 @@
+/************************************************************************************************************************************/
+/**************************************************DESIGN FOR DESKTOPS***************************************************************/
+/************************************************************************************************************************************/
+
 * {
     margin: 0;
     padding: 0;
@@ -10,9 +14,6 @@
 .container {
     margin: auto;
     padding: 0 100px;
-}
-
-header .container {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -21,7 +22,6 @@ header .container {
 
 header {
     height: 80px;
-    position: fixed;
     width: 100%;
     top: 0;
     left: 0;
@@ -29,21 +29,25 @@ header {
     background-color: white;
 }
 
-header .logo {
+header.container img {
     display: inline-block;
-    padding-left: 100px;
-    width: 36px;
-    height: 36px;
 }
 
 header nav {
     display: inline-block;
-    padding-right: 100px;
-
 }
 
 header nav ul li {
     display: inline-block;
+}
+
+header nav ul li.menu-icon {
+    display: none;
+    vertical-align: middle;
+}
+
+nav #burger-menu input {
+    display: none;
 }
 
 header nav ul li a {
@@ -56,6 +60,11 @@ header nav ul li a {
     font-family: 'IBM Plex Mono', monospace;
 }
 
+header nav ul li a:hover {
+    color: #00F3BB;
+    text-decoration: line-through;
+}
+
 header nav ul li:last-of-type a {
     margin-right: 0;
 }
@@ -65,18 +74,19 @@ header nav ul li:last-of-type a {
 .hero {
     max-width: 1440px;
     margin: auto;
-    padding: 240px 0 100px 200px;
+    padding: 200px 0 100px 200px;
 }
 
 .hero .hero-content {
-    display: inline-block;
     height: 100%;
 }
 
 .hero-content h1 {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 400;
     font-size: 64px;
-    letter-spacing: 0;
-    margin-bottom: 0;
+    color: #060A24;
+    letter-spacing: 1.5px;
 }
 
 .dot {
@@ -86,6 +96,7 @@ header nav ul li:last-of-type a {
     }
 
 .hero-content p {
+    font-family: 'IBM Plex Mono', monospace;
     width: 628px;
     height: 48px;
     font-size: 16px;
@@ -124,11 +135,12 @@ header nav ul li:last-of-type a {
     clip-path: polygon(100% 0%, 100% 85%, 0% 100%, 0% 10%);
 }
 
-.episodios {
+.episodes h2 {
     display: flex;
     font-size: 48px;
     color: #FFFFFF;
     letter-spacing: 0;
+    line-height: 42px;
     padding: 145px 0 46px 445px;
 }
 
@@ -138,7 +150,12 @@ header nav ul li:last-of-type a {
     flex-grow: 0.4;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    margin-left: 235px;
+    margin-left: 190px;
+}
+
+.container2 iframe {
+    width: 584px;
+    height: 232px;
 }
 
 .episode1 {
@@ -338,4 +355,183 @@ header nav ul li:last-of-type a {
     letter-spacing: 0;
     line-height: 28px;
     padding-left: 100px;
+}
+
+@media screen and (max-width: 960px) {
+
+    .container {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        padding: 0 30px;
     }
+
+    header .container img {
+        display: flex;
+        width: 36px;
+        height: 36px;
+    }
+
+    header nav ul li {
+        display: flex;
+    }
+    
+    /************************************************Burger menu***********************************************************/
+
+    /*Size of checkbox burger input*/
+    nav #burger-menu input {
+        display: none;
+        z-index: 2;
+        position: absolute;
+        top: 10px;
+        right: 16px;
+        transform: scale(1.5);
+    }
+    /*******************************/
+
+    nav #burger-menu .s1 {
+        transform-origin: 20% 100%;
+        margin-bottom: 3px;
+    }
+
+    nav #burger-menu .s2 {
+        margin-bottom: 3px;
+    }
+
+    nav #burger-menu .s3 {
+        transform-origin: 20% 100%;
+    }
+
+    /********Burger Icon itself*********/
+    nav #burger-menu span {
+        display: block;
+        width: 24px;
+        height: 2px;
+        position: relative;
+        background-color: #000000;
+        z-index: 1;
+        transition: 0.3s ease, 0.3s ease, 0.3s ease;
+    }
+    /***********************************/
+
+    nav #burger-menu ul {
+        position: absolute;
+        top: 80px;
+        right: 0;
+        width: 0;
+        height: 224px;
+        padding-left: 0px;
+        padding-top: 16px;
+        overflow: hidden;
+        background-color: #0000EC;
+        list-style-type: none;
+    }
+
+    nav #burger-menu ul li {
+        margin-left: 16px;
+    }
+
+    nav #burger-menu input:checked ~ label .s1 {
+        opacity: 1;
+        transform: rotate(45deg);
+        background-color: #000000;
+    }
+
+    nav #burger-menu input:checked ~ label .s2 {
+        opacity: 0;
+    }
+    
+    nav #burger-menu input:checked ~ label .s3 {
+        opacity: 1;
+        transform: rotate(-45deg);
+        background-color: #000000;
+    }
+
+    nav #burger-menu input:checked ~ ul {
+        width: 100%;
+        transition: width 0.3s ease-out;
+    }
+
+    nav #burger-menu ul li a {
+        color: #FFFFFF;
+        margin-bottom: 24px;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 28px;
+    }
+
+        nav #burger-menu ul li a:hover {
+        color: #00F3BB;
+        text-decoration: line-through;
+    }
+    /******************************************end of Burger Menu***********************************************/
+
+    /***************************************Mobile Hero Section*************************************************/
+
+    .hero {
+        margin-top: 29px;
+        padding: 0 16px;
+    }
+
+    .hero-content h1 {
+        font-size: 36px;
+        letter-spacing: 0;
+        line-height: 42px;
+        margin: 0;
+        padding-right: 42px;
+    }
+
+    .dot {
+        font-size: 36px;
+    }
+
+    .hero-content p {
+        font-size: 14px;
+        line-height: 22px;
+        text-align: left;
+        margin: 16px 0;
+        width: 288px;
+        height: 66px;
+    }
+
+    .hero .hero-content button {
+        width: 272px;
+        height: 48px;
+        font-size: 16px;
+        line-height: 22px;
+        margin: 36px 0;
+    }
+    /***************************************************************************************************************/
+
+    /**************************************Mobile Episode section***************************************************/
+
+    .container2 {
+        margin: 0;
+        flex-grow: 0.3;
+    }
+
+    .container2 iframe {
+        width: 275px;
+    }
+
+    .episodes {
+        height: 1350px;
+        clip-path: polygon(0 4%, 100% 0%, 100% 96%, 0% 100%);
+    }
+
+    .episodes h2 {
+        display: flex;
+        font-size: 36px;
+        padding: 64px 16px 21px;
+    }
+
+    /*******************************************************************************************************************/
+
+    /*****************************************Mobile Us section*********************************************************/
+
+    .nosotrxs .phone {
+        margin-top: 36px;
+        display: flex;
+        justify-content: center;
+    }
+}
