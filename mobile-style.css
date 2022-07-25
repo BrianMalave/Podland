@@ -1,3 +1,290 @@
 /************************************************************************************************************************************/
 /**************************************************DESIGN FOR MOBILES****************************************************************/
 /************************************************************************************************************************************/
+
+@media screen and (max-width: 425px) {
+
+    .container {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        padding: 0 30px;
+    }
+
+    header .container img {
+        display: flex;
+        width: 36px;
+        height: 36px;
+    }
+
+    header nav ul li {
+        display: flex;
+    }
+
+/************************************************Burger menu from Scratch(PURECSS)***********************************************************/
+/*Size of checkbox burger input*/
+    nav #burger-menu input {
+        display: none;
+        z-index: 2;
+        position: absolute;
+        top: 10px;
+        right: 16px;
+        transform: scale(1.5);
+    }
+/*******************************/
+
+    nav #burger-menu .s1 {
+        transform-origin: 20% 100%;
+        margin-bottom: 3px;
+    }
+
+    nav #burger-menu .s2 {
+        margin-bottom: 3px;
+    }
+
+    nav #burger-menu .s3 {
+        transform-origin: 20% 100%;
+    }
+
+/********Burger Icon itself*********/
+    nav #burger-menu span {
+        display: block;
+        width: 24px;
+        height: 2px;
+        position: relative;
+        background-color: #000000;
+        z-index: 1;
+        transition: 0.3s ease, 0.3s ease, 0.3s ease;
+    }
+/***********************************/
+
+    nav #burger-menu ul {
+        position: absolute;
+        top: 80px;
+        right: 0;
+        width: 0;
+        height: 224px;
+        padding-left: 0px;
+        padding-top: 16px;
+        overflow: hidden;
+        background-color: #0000EC;
+        list-style-type: none;
+    }
+
+    nav #burger-menu ul li {
+        margin-left: 16px;
+    }
+
+    nav #burger-menu input:checked ~ label .s1 {
+        opacity: 1;
+        transform: rotate(45deg);
+        background-color: #000000;
+    }
+
+    nav #burger-menu input:checked ~ label .s2 {
+        opacity: 0;
+    }
+    
+    nav #burger-menu input:checked ~ label .s3 {
+        opacity: 1;
+        transform: rotate(-45deg);
+        background-color: #000000;
+    }
+
+    nav #burger-menu input:checked ~ ul {
+        width: 100%;
+        transition: width 0.3s ease-out;
+    }
+
+    nav #burger-menu ul li a {
+        color: #FFFFFF;
+        margin-bottom: 24px;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 28px;
+    }
+
+        nav #burger-menu ul li a:hover {
+        color: #00F3BB;
+        text-decoration: line-through;
+    }
+/*****************************************end of Burger Menu***********************************************/
+
+/***************************************Mobile Hero Section*************************************************/
+
+    .hero {
+        margin-top: 29px;
+        padding: 0 16px;
+    }
+
+    .hero-content h1 {
+        font-size: 36px;
+        letter-spacing: 0;
+        line-height: 42px;
+        margin: 0;
+        padding-right: 42px;
+    }
+
+    .dot {
+        font-size: 36px;
+    }
+
+    .hero-content p {
+        font-size: 14px;
+        line-height: 22px;
+        text-align: left;
+        margin: 19px 0;
+        width: 100%;
+        height: 66px;
+    }
+
+    .hero .hero-content button {
+        width: 100%;
+        height: 48px;
+        font-size: 16px;
+        line-height: 22px;
+        margin: 46px 0;
+    }
+/***************************************************************************************************************/
+/**************************************Mobile Episode section***************************************************/
+
+    .container2 {
+        margin: 0;
+        flex-grow: 0.3;
+    }
+
+    .container2 iframe {
+        width: 275px;
+    }
+
+    .episodes {
+        height: 1350px;
+        clip-path: polygon(0 4%, 100% 0%, 100% 96%, 0% 100%);
+    }
+
+    .episodes h2 {
+        display: flex;
+        font-size: 36px;
+        padding: 64px 16px 21px;
+        margin-left: 0;
+    }
+/*******************************************************************************************************************/
+/*****************************************Mobile Us section*********************************************************/
+
+    .nosotrxs {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .nosotrxs .phone {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: flex;
+    }
+
+    .nosotrxs-text {
+        display: flex;
+        flex-direction: column;
+        max-width: 100%;
+    }
+    
+    .nosotrxs-text h2 {
+        width: 288px;
+        height: 84px;
+        margin: 27px 0 10px 0px;
+        padding: 0;
+        font-size: 36px;
+        line-height: 42px;
+    }
+    
+    .nosotrxs-text p {
+        max-width: 240px;
+        font-family: "IBM Plex Mono", monospace;
+        font-size: 14px;
+        line-height: 22px;
+        text-align: inherit;
+    }
+/*************************************************************************************************************************/
+/********************************************Mobile Special-guest section*************************************************/
+
+    #special-guest h2 {
+        margin-top: 1px;
+        font-size: 36px;
+        line-height: 42px;
+        margin: 130px 25px 16px;
+        padding: 0 35px 14px 18px;
+    }
+
+    #special-guest .special-guest-images li {
+        height: 29vh;
+        flex-grow: 0;
+    }
+/***************************************************************************************************************************/
+/************************************************Mobile themes section******************************************************/
+
+    #themes h2 {
+        font-size: 36px;
+        line-height: 42px;
+        padding: 48px 0 37px 16px;
+        margin-left: 18px;
+    }
+
+    #themes .some-themes {
+        display: flex;
+        padding-top: 56px;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    #themes .some-themes ul {
+        display: inline-block;
+    }
+
+    #themes .some-themes li:not(:first-child) {
+        padding-left: 0;
+    }
+/***************************************************************************************************************************/
+/***************************************************Mobile News Section*****************************************************/
+
+    #news .last-news {
+        height: 341px;
+        padding: 0 16px;
+        clip-path: polygon(0 8%, 100% 0%, 100% 100%, 0% 100%);
+    }
+
+    #news .last-news h2 {
+        padding: 64px 0 36px 0;
+        font-size: 36px;
+        line-height: 42px;
+        text-align: center;
+    }
+
+    #news .last-news a {
+        width: 100%;
+    }
+
+    #news .last-news button {
+        width: 100%;
+        height: 48px;
+        font-size: 16px;
+        line-height: 22px;
+    }
+/*****************************************************************************************************************************/
+/*******************************************************mobile footer*********************************************************/
+
+    .foot {
+        height: 121px;
+        flex-direction: column;
+    }
+
+    .foot p {
+        font-size: 14px;
+        line-height: 22px;
+        padding: 24px 0px 16px 0px;
+    }
+    .foot .media-icons a img {
+        width: 60px;
+        padding-bottom: 31px;
+    }
+}
