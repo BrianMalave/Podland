@@ -139,7 +139,7 @@
     }
 
     .hero .hero-content button {
-        width: 100%;
+        width: 288px;
         height: 48px;
         font-size: 16px;
         line-height: 22px;
@@ -209,16 +209,16 @@
 /********************************************Mobile Special-guest section*************************************************/
 
     #special-guest h2 {
-        margin-top: 1px;
         font-size: 36px;
         line-height: 42px;
         margin: 130px 25px 16px;
         padding: 0 35px 14px 18px;
+        text-align: start;
     }
 
     #special-guest .special-guest-images li {
         height: 29vh;
-        flex-grow: 0;
+        flex-grow: 1;
     }
 /***************************************************************************************************************************/
 /************************************************Mobile themes section******************************************************/

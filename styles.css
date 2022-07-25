@@ -214,16 +214,13 @@ header nav ul li:last-of-type a {
 }
 
 #special-guest h2 {
-    margin-top: 1px;
 	font-family: "IBM Plex Sans";
 	font-size: 48px;
 	color: #060A24;
 	letter-spacing: 0;
 	line-height: 62px;
 	font-weight: 400;
-    padding-top: 64px;
-	padding-left: 250px;
-    padding-bottom: 36px;
+    padding: 64px 0 36px 250px;
 }
 
 #special-guest .special-guest-images {
